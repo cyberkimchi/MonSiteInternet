@@ -1,46 +1,77 @@
  @import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
+
+
+/* ------------- Global ------------- */
+
+body {
+  background: #436d9a;
+}
+
+/* ------------- Curseur ------------- */
    
-        body {
-            background: #436d9a;
-        }
-          .logo_dark {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 20%;
-          }
-          
-          p {
-            text-align : center;
-            font-family: 'Glacial Indifference';
-            font-size : 400%;
-            color : #e0e1e4;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top : 60px;
-            width: 100%;
-          }
+* {	
+  cursor: url(img/curseur.png), auto;
+}
 
-          * {	
-            cursor:url(curseur.png),auto;
-          }
+/* ------------- Images ------------- */
 
-          .btn {
-            display:block;
-            width:200px;
-            line-height:75px;
-            text-align:center;
-            background-color : #e0e1e4;
-            color:#436d9a;
-            text-align : center;
-            font-family: 'Glacial Indifference';
-            font-size : 20px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 30px;
-          }
+.logo_dark {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0%;
+  width: 500px;
+}
 
-          .btn:hover {
-            font-size : 25px;
-          }
+.etoile1 {
+  display: block;
+  float: left;
+  margin-top: 110px;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 70px;
+}
+
+.etoile2 {
+  display: block;
+  float: right;
+  margin-top: 110px;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 70px;
+}
+      
+/* ------------- Textes ------------- */
+
+.titre {
+  text-align: center;
+  font-family: 'Glacial Indifference';
+  font-size: 300%;
+  color: #e0e1e4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
+/* ------------- Boutons ------------- */
+.btn {
+  display: block;
+  width: 200px;
+  line-height: 75px;
+  text-align: center;
+  background-color: #e0e1e4;
+  color: #436d9a;
+  text-align: center;
+  font-family: 'Glacial Indifference';
+  font-size : 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100%;
+  margin-bottom: 30px;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  font-size: 25px;
+}
