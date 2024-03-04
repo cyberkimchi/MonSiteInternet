@@ -1,28 +1,45 @@
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.href = 'page-de-redirection.html';
+}
+
+document.getElementById('boutonEmail').addEventListener('click', function() {
+    window.location.href = 'mailto:alice.basone@orange.fr';
+});
+
 const modeSwitch = document.getElementById('modeSwitch');
 const logo = document.querySelector('.logo_dark');
-const etoile1 = document.querySelector('.etoile1');
-const etoile2 = document.querySelector('.etoile2');
+const body = document.body;
+const html = document.documentElement;
+
+function updateCursor(mode) {
+    if (mode === 'light') {
+        body.style.cursor = 'url(img/cursor.png), auto';
+        html.style.cursor = 'url(img/cursor.png), auto';
+    } else {
+        body.style.cursor = 'url(img/cursor_light.png), auto';
+        html.style.cursor = 'url(img/cursor_light.png), auto';
+    }
+}
 
 modeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('light-mode');
+    body.classList.toggle('light-mode');
     localStorage.setItem('isLightMode', modeSwitch.checked);
 
     if (modeSwitch.checked) {
         logo.src = 'img/logo_light.png'; 
-        etoile1.src = 'img/etoile_light.gif';
-        etoile2.src = 'img/etoile_light.gif';
+        updateCursor('light');
     } else {
         logo.src = 'img/logo_dark.png';
-        etoile1.src = 'img/etoile.gif';
-        etoile2.src = 'img/etoile.gif';
+        updateCursor('dark');
     }
 });
 
 const isLightMode = localStorage.getItem('isLightMode') === 'true';
 if (isLightMode) {
-    document.body.classList.add('light-mode');
+    body.classList.add('light-mode');
     modeSwitch.checked = true;
     logo.src = 'img/logo_light.png';
-    etoile1.src = 'img/etoile_light.gif';
-    etoile2.src = 'img/etoile_light.gif';
+    updateCursor('light');
+} else {
+    updateCursor('dark');
 }

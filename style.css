@@ -1,40 +1,27 @@
 /* ------------- Global ------------- */
+
 @import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 /* ------------- Curseur ------------- */
-   
-* {	
-  cursor: url(img/curseur.png), auto;
+
+.pointer {
+  cursor: url('img/pointer.png'), pointer;
 }
 
 /* ------------- Images ------------- */
 
 .logo_dark {
-  display: block;
+  display : block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 45px;
-  margin-bottom: 0%;
-  width: 200px;
-}
-
-
-.etoile1 {
-  display: block;
-  float: left;
-  margin-top: 50px;
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 50px;
-}
-
-.etoile2 {
-  display: block;
-  float: right;
-  margin-top: 50px;
-  margin-right: 10%;
-  margin-left: 10%;
-  width: 50px;
+  width: 18%;
 }
 
 /* ------------- Modes ------------- */
@@ -42,6 +29,12 @@
 body {
   background-color: #436d9a;
   color: #e0e1e4;
+  cursor: url(img/cursor.png), auto;
+}
+
+body.light-mode {
+  background-color: #e0e1e4;
+  color: #436d9a;
 }
 
 .container {
@@ -50,7 +43,7 @@ body {
 }
 
 .switch {
-  position: relative;
+  position: absolute;
   display: inline-block;
   width: 60px;
   height: 34px;
@@ -62,13 +55,18 @@ body {
 
 .slider {
   position: absolute;
-  cursor: pointer;
+  cursor: url('img/pointer.png'), pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: #e0e1e4;
   transition: .4s;
+}
+
+.light-mode .slider {
+  cursor: url('img/pointer_light.png'), pointer;
+  cursor: cover;
 }
 
 .slider:before {
@@ -104,11 +102,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-body.light-mode {
-  background-color: #e0e1e4;
-  color: #436d9a;
-}
-
 
 /* ------------- Textes ------------- */
 
@@ -127,28 +120,69 @@ body.light-mode .titre {
   color: #436d9a;
 }
 
+.footer {
+  position: fixed;
+  text-align: center;
+  font-family: 'Glacial Indifference';
+  font-size: 100%;
+  color: #e0e1e4;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.light-mode .footer {
+  color: #436d9a;
+}
+
+.redirect {
+  text-align: center;
+  font-family: 'Glacial Indifference';
+  font-size: 250%;
+  color: #e0e1e4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer_redirect {
+  text-align: center;
+  font-family: 'Glacial Indifference';
+  font-size: 100%;
+  color: #e0e1e4;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* ------------- Boutons ------------- */
 
-.btn {
+#boutonEmail {
   display: block;
   width: 200px;
-  line-height: 75px;
+  height: 75px;
   text-align: center;
   background-color: #e0e1e4;
   color: #436d9a;
-  text-align: center;
   font-family: 'Glacial Indifference';
-  font-size : 30px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
+  font-size: 30px;
+  margin: auto;
   border-radius: 30px;
+  border: none;
 }
 
-body.light-mode .btn {
+body.light-mode #boutonEmail {
   background-color: #436d9a;
   color: #e0e1e4;
 }
-.btn:hover {
+
+#boutonEmail:hover {
   font-size: 35px;
+  cursor: url('img/pointer.png'), pointer;
+}
+
+.light-mode #boutonEmail:hover {
+  cursor: url('img/pointer_light.png'), pointer;
+  cursor: cover;
 }
