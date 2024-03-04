@@ -1,11 +1,5 @@
- @import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
-
-
 /* ------------- Global ------------- */
-
-body {
-  background: #436d9a;
-}
+@import url('https://fonts.cdnfonts.com/css/glacial-indifference-2');
 
 /* ------------- Curseur ------------- */
    
@@ -19,34 +13,109 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 45px;
   margin-bottom: 0%;
-  width: 500px;
+  width: 200px;
 }
+
 
 .etoile1 {
   display: block;
   float: left;
-  margin-top: 110px;
+  margin-top: 50px;
   margin-right: 10%;
   margin-left: 10%;
-  width: 70px;
+  width: 50px;
 }
 
 .etoile2 {
   display: block;
   float: right;
-  margin-top: 110px;
+  margin-top: 50px;
   margin-right: 10%;
   margin-left: 10%;
-  width: 70px;
+  width: 50px;
 }
-      
+
+/* ------------- Modes ------------- */
+
+body {
+  background-color: #436d9a;
+  color: #e0e1e4;
+}
+
+.container {
+  margin-top: 20px;
+  margin-left: 20px
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e0e1e4;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url('img/sun.png');
+  background-size: cover;
+  transition: .4s;
+}
+
+.light-mode .slider:before {
+  background-image: url('img/moon.png');
+  background-size: cover;
+}
+
+input:checked + .slider {
+  background-color: #436d9a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+body.light-mode {
+  background-color: #e0e1e4;
+  color: #436d9a;
+}
+
+
 /* ------------- Textes ------------- */
 
 .titre {
   text-align: center;
   font-family: 'Glacial Indifference';
-  font-size: 300%;
+  font-size: 250%;
   color: #e0e1e4;
   display: block;
   margin-left: auto;
@@ -54,7 +123,12 @@ body {
   margin-top: 5px;
 }
 
+body.light-mode .titre {
+  color: #436d9a;
+}
+
 /* ------------- Boutons ------------- */
+
 .btn {
   display: block;
   width: 200px;
@@ -64,14 +138,17 @@ body {
   color: #436d9a;
   text-align: center;
   font-family: 'Glacial Indifference';
-  font-size : 20px;
+  font-size : 30px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100%;
   margin-bottom: 30px;
   border-radius: 30px;
 }
 
+body.light-mode .btn {
+  background-color: #436d9a;
+  color: #e0e1e4;
+}
 .btn:hover {
-  font-size: 25px;
+  font-size: 35px;
 }
