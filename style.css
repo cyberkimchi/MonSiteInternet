@@ -141,6 +141,7 @@ body.light-mode .titre {
 }
 
 .redirect {
+  cursor: url('img/cursor_light.png'), auto;
   text-align: center;
   font-family: 'Glacial Indifference';
   font-size: 250%;
@@ -149,17 +150,6 @@ body.light-mode .titre {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.footer_redirect {
-  position: fixed;
-  text-align: center;
-  font-family: 'Glacial Indifference';
-  font-size: 100%;
-  color: #e0e1e4;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* ------------- Boutons ------------- */

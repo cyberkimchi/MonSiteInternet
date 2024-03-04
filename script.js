@@ -1,5 +1,5 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    window.location.href = 'page-de-redirection.html';
+    window.location.href = 'redirect.html';
 }
 
 document.getElementById('boutonEmail').addEventListener('click', function() {
