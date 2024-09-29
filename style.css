@@ -7,6 +7,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
+  overflow: auto;
 }
 
 /* ------------- Curseur ------------- */
@@ -21,7 +22,7 @@ html, body {
   display : block;
   margin-left: auto;
   margin-right: auto;
-  width: 18%;
+  width: 300px
 }
 
 .smiley {
@@ -114,36 +115,75 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-
 /* ------------- Textes ------------- */
 
-.titre {
-  text-align: center;
+.list {
+  list-style: none;
+  padding-left: 0;
   font-family: 'Glacial Indifference';
-  font-size: 250%;
-  color: #e0e1e4;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
+  font-size: 23px;
+  margin: 20px auto;
+  width: 80%;
 }
 
-body.light-mode .titre {
-  color: #436d9a;
+.list li {
+  margin-bottom: 15px;
+  padding-left: 45px;
+  background-image: url('img/puce.gif');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+
+.list2 {
+  list-style: none;
+  padding-left: 0;
+  font-family: 'Glacial Indifference';
+  font-size: 19px;
+  margin: 20px auto;
+  width: 80%;
+}
+
+.list2 li {
+  margin-bottom: 15px;
+  padding-left: 35px;
+  background-image: url('img/puce.png');
+  background-size: 27px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+
+body.light-mode .list li {
+  background-image: url('img/puce_light.gif');
+}
+
+body.light-mode .list2 li {
+  background-image: url('img/puce_light.png');
+}
+
+#a {
+  color: inherit; 
+  text-decoration: none;
+  cursor: url('img/pointer_light.png'), pointer;
+  cursor: cover;
+}
+
+body.light-mode #a {
+  cursor: url('img/pointer.png'), pointer;
+  cursor: cover;
 }
 
 .footer {
   position: fixed;
-  text-align: center;
+  bottom: 0;
+  right: 10px;
+  text-align: right;
   font-family: 'Glacial Indifference';
   font-size: 100%;
   color: #e0e1e4;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.light-mode .footer {
+body.light-mode .footer {
   color: #436d9a;
 }
 
@@ -158,33 +198,104 @@ body.light-mode .titre {
   transform: translate(-50%, -50%);
 }
 
+/* ------------- Navigation ------------- */
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: #436d9a;
+  padding: 10px 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #e0e1e4;
+  font-family: 'Glacial Indifference';
+  font-size: 20px;
+  margin: 0 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #e0e1e4;
+  color: #436d9a;
+  cursor: url('img/pointer.png'), pointer;
+  cursor: cover;
+}
+
+body.light-mode .navigation {
+  background-color: #e0e1e4;
+}
+
+body.light-mode .navigation a {
+  color: #436d9a;
+  cursor: url('img/pointer_light.png'), pointer;
+  cursor: cover;
+}
+
+body.light-mode .navigation a:hover {
+  background-color: #436d9a;
+  color: #e0e1e4;
+  cursor: url('img/pointer_light.png'), pointer;
+  cursor: cover;
+}
+
 /* ------------- Boutons ------------- */
 
-#boutonEmail {
-  display: block;
-  width: 200px;
-  height: 75px;
+.telechargement {
+  text-align: center;
+}
+
+#downloadCV {
+  display: inline-block;
+  width: 250px;
+  height: 60px;
   text-align: center;
   background-color: #e0e1e4;
   color: #436d9a;
   font-family: 'Glacial Indifference';
-  font-size: 30px;
+  font-size: 25px;
   margin: auto;
+  margin-top: 25px;
+  margin-bottom: 100px;
   border-radius: 30px;
   border: none;
 }
 
-body.light-mode #boutonEmail {
+body.light-mode #downloadCV {
   background-color: #436d9a;
   color: #e0e1e4;
 }
 
-#boutonEmail:hover {
-  font-size: 35px;
+#downloadCV:hover  {
+  background-color: #c8c8c8;
   cursor: url('img/pointer.png'), pointer;
+  cursor: cover;
 }
 
-.light-mode #boutonEmail:hover {
+.light-mode #downloadCV:hover {
+  background-color: #7f99b6;
   cursor: url('img/pointer_light.png'), pointer;
   cursor: cover;
+}
+
+#scrollToTop {
+  bottom: 20px;
+  position: absolute;
+  cursor: url('img/pointer_light.png'), pointer;
+  opacity: 0.4;
+}
+
+#scrollToTop:hover {
+  opacity: 1;
+}
+
+#scrollToTop img {
+  width: 50px;
+}
+
+body.light-mode #scrollToTop {
+  cursor: url('img/pointer.png'), pointer;
 }

@@ -14,20 +14,87 @@
                 <input type="checkbox" id="modeSwitch">
                 <span class="slider round"></span>
             </label>
+
+            <a href="#top" id="scrollToTop">
+                <img src="img/up_light.gif" class="up_light" alt="Up">
+            </a>  
+
         </div>
-        <img src="img/logo_dark.png" class="logo_dark">
-        <p class="titre">Site en cours de création !</p>
-        <button id="boutonEmail">Contact</button>
+        
+        <img src="img/logo_dark.png" class="logo_dark" id="top" alt="Logo">
+
+        <nav class="navigation">
+            <a href="#parcours">Mon parcours</a>
+            <a href="#projets">Mes projets</a>
+            <a href="#telechargement">Mon CV</a>
+        </nav>
+
+        <section id="infos-section">
+            <ul class="list">
+                <h2><li id="parcours">Mon parcours</li></h2>
+                    <p>Depuis petite, j'adore l'informatique, j'ai d'ailleurs eu mon premier ordinateur à 5 ans !
+                    Mon projet d'en faire un métier s'est affiné vers mes 15 ans, et j'ai choisi l'enseignement d'exploration
+                    Informatique et Création du Numérique à mon entrée au lycée. J'ai ensuite été en 1ère scientifique spécialité
+                    Science de l'Ingénieur. J'ai poursuivi en terminale avec l'option Informatique et Science du Numérique.
+                    J'ai obtenu mon bac lors du confinement de 2020, ce qui a un peu brouillé mes perspectives d'avenir, et j'ai
+                    choisi de rentrer en CPGE PTSI. Mais l'informatique me manquait beaucoup, et je ne me voyais pas poursuivre en classe préparatoire.
+                    C'est à ce moment-là que j'ai intégré l'université et que je suis allée en L1 IEEEA en cours d'année.
+                    J'ai obtenu mon diplôme de licence en 2024, suite à un stage de fin de L3 effectué chez ArianeGroup en tant que développeuse.
+                    Je suis actuellement en Master Informatique Sécurité des Systèmes Informatiques :)</p>
+            </ul>
+            <ul class="list">
+
+                <h2><li id="projets">Mes projets</li></h2>
+
+                <p>Au cours de ma scolarité, j'ai pu participer à de nombreux projets en groupe ou seule :</p>
+
+                <ul class="list2">
+                    <h2><li id projets2>En C :</li></h2>
+
+                    <h3>☆ Interpréteur de scripts LaTeX</h3>
+
+                    <p><b>2024</b> : Ce projet utilise les outils Bison et Flex pour développer un interpréteur de scripts LaTeX. 
+                    Le programme prend en entrée un fichier texte contenant le script écrit en LaTeX et l'analyse à l'aide de l'analyseur syntaxique et de l'analyseur lexical. 
+                    Une fois les bornes spécifiques du langage LaTeX reconnues, le programme génère et exécute le fichier à travers du code assembleur.</p>
+                    
+                    <h3>☆ Les lignes identiques</h3>
+
+                    <p><b>2023</b> : Ce projet consiste à, s’il n’y a qu’un seul fichier de texte, afficher, pour chaque ligne de texte 
+                    non vide apparaissant au moins deux fois, les numéros des lignes où elle apparaît ainsi que son contenu, ou bien s’il y a au moins 
+                    deux fichiers de texte, afficher, pour chaque ligne de texte non vide apparaissant au moins une fois dans tous les fichiers, 
+                    le nombre d’occurrences de la ligne dans chacun des fichiers ainsi que son contenu.</p>
+
+                    <h2><li id projets2>En Web:</li></h2>
+
+                    <h3>☆ Mon site internet</h3>
+
+                    <p><b>2024</b> : Ce projet est tout simplement ce site sur lequel vous naviguez. Développé en HTML5, CSS et JavaScript, il me permet
+                    de maîtriser ma e-identité mais aussi de m'entraîner au développement web. J'ai conçu et designé moi-même les logos et les éléments
+                    graphiques de mon site, afin de le rendre le plus personnel possible et pour laisser ma créativité s'exprimer. 
+                    <!--Le personnage animé qui vous accueille a quant a lui été dessiné par l'artiste mexicaine
+                    <a href="https://www.instagram.com/brenfi.co" target="_blank" id="a">@brenfi.co</a>--></p>
+
+                    <h3>☆ La suite prochainement...</h3>
+                </ul>
+
+                <h2><li id="telechargement">Mon CV</li></h2>
+                <p>Si vous souhaitez visualiser mon CV qui retrace mon parcours, cliquez sur ce bouton :</p>
+
+            </ul>
+        </section>
+
+        <div class="telechargement">
+            <a href="img/Alice_Basone_CV.pdf" target="_blank" download="Alice_Basone_CV.pdf">
+                <button id="downloadCV">Télécharger mon CV</button>
+            </a>
+        </div>
 
         <footer>
             <div> 
                 <span class="footer">© Alice Basone</span>
             </div>
         </footer>
-
     </body>
 
     <script src="script.js"></script>
-
 </html>
-
