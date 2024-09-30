@@ -1,6 +1,4 @@
-☆ BIENVENUE sur mon site vitrine https://alicebasone.fr ! ☆
-
-
+☆ https://alicebasone.fr ☆
 
 FONCTIONNALITÉS
 
