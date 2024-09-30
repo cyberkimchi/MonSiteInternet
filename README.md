@@ -1,6 +1,7 @@
 ☆ BIENVENUE sur mon site vitrine https://alicebasone.fr ! ☆
 
 
+
 FONCTIONNALITÉS
 
    ☆ Page d'accueil pour présenter mon parcours et mes projets,
