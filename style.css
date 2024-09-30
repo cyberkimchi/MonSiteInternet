@@ -117,6 +117,14 @@ input:checked + .slider:before {
 
 /* ------------- Textes ------------- */
 
+.paragraphe {
+  max-width: 100ch;
+}
+
+.alinea {
+  text-indent: 30px;
+}
+
 .list {
   list-style: none;
   padding-left: 0;
@@ -244,7 +252,7 @@ body.light-mode .navigation a:hover {
 
 /* ------------- Boutons ------------- */
 
-.telechargement {
+.cv {
   text-align: center;
 }
 
