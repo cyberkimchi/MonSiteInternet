@@ -18,13 +18,6 @@ html, body {
 
 /* ------------- Images ------------- */
 
-.smiley {
-  display : block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 18%;
-}
-
 .me {
   display : block;
   margin-left: auto;
@@ -32,12 +25,16 @@ html, body {
   width: 400px;
 }
 
+.logo_box {
+  position: relative;
+}
+
 .logo {
-  display : block;
   position: absolute;
+  display : block;
   top: 0px;
   right: 20px;
-  width: 150px;
+  width: 175px;
   cursor: url('img/pointer_light.png'), pointer;
 }
 
