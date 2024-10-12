@@ -1,10 +1,8 @@
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    window.location.href = 'redirect.html';
-}
-
 const modeSwitch = document.getElementById('modeSwitch');
-const logo = document.querySelector('.logo_dark');
 const up = document.querySelector('.up_light');
+const github = document.querySelector('.github');
+const linkedin = document.querySelector('.linkedin');
+const insta = document.querySelector('.insta');
 const body = document.body;
 const html = document.documentElement;
 
@@ -22,13 +20,17 @@ modeSwitch.addEventListener('change', () => {
     body.classList.toggle('light-mode');
     localStorage.setItem('isLightMode', modeSwitch.checked);
 
-    if (modeSwitch.checked) {
-        logo.src = 'img/logo_light.png'; 
+    if (modeSwitch.checked) { 
         up.src = 'img/up_light.gif';
+        github.src = 'img/github_light.png'; 
+        linkedin.src = 'img/linkedin_light.png'; 
+        insta.src = 'img/insta_light.png'; 
         updateCursor('light');
     } else {
-        logo.src = 'img/logo_dark.png';
         up.src = 'img/up.gif';
+        github.src = 'img/github.png'; 
+        linkedin.src = 'img/linkedin.png'; 
+        insta.src = 'img/insta.png';
         updateCursor('dark');
     }
 });
@@ -37,12 +39,16 @@ const isLightMode = localStorage.getItem('isLightMode') === 'true';
 if (isLightMode) {
     body.classList.add('light-mode');
     modeSwitch.checked = true;
-    logo.src = 'img/logo_light.png';
     up.src = 'img/up_light.gif';
+    github.src = 'img/github_light.png'; 
+    linkedin.src = 'img/linkedin_light.png'; 
+    insta.src = 'img/insta_light.png';
     updateCursor('light');
 } else {
     body.classList.remove('light-mode');
-    logo.src = 'img/logo_dark.png';
     up.src = 'img/up.gif';
+    github.src = 'img/github.png'; 
+    linkedin.src = 'img/linkedin.png';
+    insta.src = 'img/insta.png';
     updateCursor('dark');
 }

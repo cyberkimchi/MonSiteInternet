@@ -1,9 +1,5 @@
 # https://alicebasone.fr
 
-## ☆ AUTEURS
-
-[Alice BASONE](https://github.com/aliceinformatic)
-
 ---
 
 ## ☆ FONCTIONNALITÉS 

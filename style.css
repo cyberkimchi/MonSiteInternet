@@ -18,18 +18,36 @@ html, body {
 
 /* ------------- Images ------------- */
 
-.logo_dark {
-  display : block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px
-}
-
 .smiley {
   display : block;
   margin-left: auto;
   margin-right: auto;
   width: 18%;
+}
+
+.me {
+  display : block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+body.light-mode .me {
+  content: url('img/me_light.gif'); 
+}
+
+.logo {
+  display : block;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 150px;
+  cursor: url('img/pointer_light.png'), pointer;
+}
+
+body.light-mode .logo {
+  content: url('img/logo_light.png');
+  cursor: url('img/pointer.png'), pointer;
 }
 
 /* ------------- Modes ------------- */
@@ -60,6 +78,7 @@ body.light-mode {
 .light-mode .switch {
   cursor: url('img/cursor.png'), auto;
 }
+
 .switch input {
   display: none;
 }
@@ -125,6 +144,14 @@ input:checked + .slider:before {
   text-indent: 30px;
 }
 
+h2 {
+  color: #3e2119;
+}
+
+.light-mode h2 {
+  color: #6d3f32; 
+}
+
 .list {
   list-style: none;
   padding-left: 0;
@@ -155,7 +182,7 @@ input:checked + .slider:before {
 .list2 li {
   margin-bottom: 15px;
   padding-left: 35px;
-  background-image: url('img/puce.png');
+  background-image: url('img/puce.gif');
   background-size: 27px;
   background-repeat: no-repeat;
   background-position: 0 5px;
@@ -166,7 +193,7 @@ body.light-mode .list li {
 }
 
 body.light-mode .list2 li {
-  background-image: url('img/puce_light.png');
+  background-image: url('img/puce_light.gif');
 }
 
 #a {
@@ -186,6 +213,7 @@ body.light-mode #a {
   bottom: 0;
   right: 10px;
   text-align: right;
+  margin-right: 10px;
   font-family: 'Glacial Indifference';
   font-size: 100%;
   color: #e0e1e4;
@@ -219,8 +247,9 @@ body.light-mode .footer {
   text-decoration: none;
   color: #e0e1e4;
   font-family: 'Glacial Indifference';
-  font-size: 20px;
-  margin: 0 15px;
+  font-size: 25px;
+  margin: 0 20px;
+  margin-bottom: 20px;
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -267,7 +296,7 @@ body.light-mode .navigation a:hover {
   font-size: 25px;
   margin: auto;
   margin-top: 25px;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
   border-radius: 30px;
   border: none;
 }
@@ -306,4 +335,58 @@ body.light-mode #downloadCV {
 
 body.light-mode #scrollToTop {
   cursor: url('img/pointer.png'), pointer;
+}
+
+.reseaux {
+  text-align: center;
+}
+
+.reseaux a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.github {
+  display: block;
+  width: 90px;
+  height: 90px;
+  transition: transform 0.2s ease;
+}
+
+.github:hover {
+  transform: scale(1.15);
+  cursor: url('img/pointer.png'), pointer;
+}
+
+.linkedin {
+  display: block;
+  width: 90px;
+  height: 90px;
+  transition: transform 0.2s ease;
+}
+
+.linkedin:hover {
+  transform: scale(1.15);
+  cursor: url('img/pointer.png'), pointer;
+}
+
+body.light-mode .linkedin:hover {
+  cursor: url('img/pointer_light.png'), pointer;
+}
+
+.insta {
+  display: block;
+  width: 90px;
+  height: 90px;
+  transition: transform 0.2s ease;
+}
+
+.insta:hover {
+  transform: scale(1.15);
+  cursor: url('img/pointer.png'), pointer;
+}
+
+body.light-mode .insta:hover {
+  cursor: url('img/pointer_light.png'), pointer;
 }
