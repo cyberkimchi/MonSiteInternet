@@ -1,4 +1,5 @@
 const modeSwitch = document.getElementById('modeSwitch');
+const me = document.querySelector('.me');
 const up = document.querySelector('.up_light');
 const github = document.querySelector('.github');
 const linkedin = document.querySelector('.linkedin');
@@ -21,12 +22,14 @@ modeSwitch.addEventListener('change', () => {
     localStorage.setItem('isLightMode', modeSwitch.checked);
 
     if (modeSwitch.checked) { 
+        me.src = 'img/me_light.gif';
         up.src = 'img/up_light.gif';
         github.src = 'img/github_light.png'; 
         linkedin.src = 'img/linkedin_light.png'; 
         insta.src = 'img/insta_light.png'; 
         updateCursor('light');
     } else {
+        me.src = 'img/me.gif';
         up.src = 'img/up.gif';
         github.src = 'img/github.png'; 
         linkedin.src = 'img/linkedin.png'; 
@@ -39,6 +42,7 @@ const isLightMode = localStorage.getItem('isLightMode') === 'true';
 if (isLightMode) {
     body.classList.add('light-mode');
     modeSwitch.checked = true;
+    me.src = 'img/me_light.gif';
     up.src = 'img/up_light.gif';
     github.src = 'img/github_light.png'; 
     linkedin.src = 'img/linkedin_light.png'; 
@@ -46,6 +50,7 @@ if (isLightMode) {
     updateCursor('light');
 } else {
     body.classList.remove('light-mode');
+    me.src = 'img/me.gif';
     up.src = 'img/up.gif';
     github.src = 'img/github.png'; 
     linkedin.src = 'img/linkedin.png';

@@ -32,10 +32,6 @@ html, body {
   width: 400px;
 }
 
-body.light-mode .me {
-  content: url('img/me_light.gif'); 
-}
-
 .logo {
   display : block;
   position: absolute;
