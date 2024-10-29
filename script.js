@@ -17,6 +17,13 @@ function updateCursor(mode) {
     }
 }
 
+function showImageAfterLoad(img) {
+    img.classList.remove('visible');
+    img.addEventListener('load', () => {
+        img.classList.add('visible');
+    });
+}
+
 modeSwitch.addEventListener('change', () => {
     body.classList.toggle('light-mode');
     localStorage.setItem('isLightMode', modeSwitch.checked);
@@ -36,6 +43,7 @@ modeSwitch.addEventListener('change', () => {
         insta.src = 'img/insta.png';
         updateCursor('dark');
     }
+    showImageAfterLoad(me);
 });
 
 const isLightMode = localStorage.getItem('isLightMode') === 'true';
@@ -57,3 +65,5 @@ if (isLightMode) {
     insta.src = 'img/insta.png';
     updateCursor('dark');
 }
+
+showImageAfterLoad(me);
