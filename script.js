@@ -1,4 +1,5 @@
 const modeSwitch = document.getElementById('modeSwitch');
+const loading = document.querySelector('.loading');
 const me = document.querySelector('.me');
 const up = document.querySelector('.up_light');
 const github = document.querySelector('.github');
@@ -6,6 +7,21 @@ const linkedin = document.querySelector('.linkedin');
 const insta = document.querySelector('.insta');
 const body = document.body;
 const html = document.documentElement;
+
+window.addEventListener('load', () => {
+    loading.classList.add('fondu');
+})
+
+window.addEventListener('transitionend', () => {
+    loading.classList.add('hidden');
+})
+
+function showImageAfterLoad(img) {
+    img.classList.remove('visible');
+    img.addEventListener('load', () => {
+        img.classList.add('visible');
+    });
+}
 
 function updateCursor(mode) {
     if (mode === 'light') {
@@ -15,13 +31,6 @@ function updateCursor(mode) {
         body.style.cursor = 'url(img/cursor_light.png), auto';
         html.style.cursor = 'url(img/cursor_light.png), auto';
     }
-}
-
-function showImageAfterLoad(img) {
-    img.classList.remove('visible');
-    img.addEventListener('load', () => {
-        img.classList.add('visible');
-    });
 }
 
 modeSwitch.addEventListener('change', () => {
@@ -65,5 +74,4 @@ if (isLightMode) {
     insta.src = 'img/insta.png';
     updateCursor('dark');
 }
-
 showImageAfterLoad(me);
