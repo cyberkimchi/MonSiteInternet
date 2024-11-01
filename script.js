@@ -9,12 +9,29 @@ const body = document.body;
 const html = document.documentElement;
 
 window.addEventListener('load', () => {
-    loading.classList.add('fondu');
-})
+    const loading = document.querySelector('.loading');
+    const isLightMode = document.body.classList.contains('light-mode');
 
-window.addEventListener('transitionend', () => {
-    loading.classList.add('hidden');
-})
+    loading.style.transition = "opacity 2s ease-in";
+    loading.style.opacity = "1";
+
+    setTimeout(() => {
+        loading.style.opacity = "0";
+    }, 100);
+
+    loading.addEventListener('transitionend', () => {
+        loading.classList.add('hidden');
+    });
+
+    setTimeout(() => {
+        loading.classList.add('hidden');
+    }, 2000);
+});
+
+document.querySelector('.loading').addEventListener('transitionend', () => {
+    document.querySelector('.loading').classList.add('hidden');
+});
+
 
 function showImageAfterLoad(img) {
     img.classList.remove('visible');
