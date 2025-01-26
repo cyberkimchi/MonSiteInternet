@@ -6,7 +6,7 @@
 
 - Page d'accueil pour présenter mon parcours et mes projets,
 - Bouton pour télécharger mon CV,
-- Mode clair/sombre avec un design soigné et pour l'accessibilité !
+- Mode clair/sombre avec un design soigné et accessible !
 
 ---
 
