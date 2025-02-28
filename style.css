@@ -172,6 +172,23 @@ h2 {
   color: #6d3f32; 
 }
 
+.icon-group {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+body.light-mode .icon-group {
+  content: url('img/icon_group.png');
+}
+
+.nb-group {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .list {
   list-style: none;
   padding-left: 0;
@@ -214,6 +231,19 @@ body.light-mode .list li {
 
 body.light-mode .list2 li {
   background-image: url('img/puce_light.gif');
+}
+
+.keywords span {
+  background-color: #e0e1e4;
+  color:#436d9a;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+body.light-mode .keywords span {
+  background-color: #436d9a;
+  color: #e0e1e4;
 }
 
 #a {
